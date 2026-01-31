@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        footer {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer {
+            display: flex;
+            margin-top: 5%;
+            background-color: black;
+            color: white;
+            height: 180px;
+            text-align: center;
+        }
+
+        .footer1,
+        .footer2 {
+            margin-left: 10%;
+            padding-top: 2%;
+            padding-right: 5%;
+        }
+
+        .a-social {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .a-social:hover {
+            text-decoration: underline;
+        }
+
+        .div-li {
+            padding-right: 5%;
+            display: flex;
+            margin-left: 5em;
+        }
+
+        .div-p {
+            clear: both;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        .text-footer {
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 5%;
+            padding: 2%;
+        }
+
+        .submit-footer {
+            text-align: center;
+            padding: 2%;
+            color: white;
+            background-color: rgb(212, 33, 33);
+            border: 3px solid rgb(212, 33, 33);
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 5%;
+        }
+
+        .submit-footer:hover {
+            background-color: aliceblue;
+            color: rgb(212, 33, 33);
+        }
+
+        .term {
+            margin: 5%;
+        }
+
+        .p-1 {
+            text-indent: 3em;
+            text-align: justify;
+        }
+
+        .p-2 {
+            border-left: 5px solid rgb(212, 33, 33);
+        }
+
+        .p-3 {
+            text-align: justify;
+        }
+
+        .a-pri {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .a-pri:hover {
+            color: rgb(212, 33, 33);
+        }
+
+        h2 {
+            margin-top: 2%;
+            margin-left: 5%;
+            width: 9em;
+            font-size: 2.5em;
+            color: rgb(0, 0, 0);
+            font-family: fantasy, sans-serif;
+            border-bottom: 5px solid red;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(212, 33, 33);
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        .address2 {
+            border-left: 5px solid rgb(212, 33, 33);
+            padding-left: 3%;
+        }
+
+        .italic {
+            font-style: italic;
+            color: gray;
+        }
+
+        @media screen and (max-width: 1024px) {
+
+            .footer {
+                width: 80em;
+            }
+
+            .footer1 {
+                width: 40%;
+                margin-left: 1em;
+            }
+        }
+        @media screen and (max-width: 390px) {
+            .term{
+                width: 1000px;
+                margin-left: 60px;
+            }
+            p{
+                font-size: 1.5em;
+            }
+            .div-p {
+                width: 70em;
+            }
+
+            .footer {
+                width: 70em;
+                padding: 10px;
+            }
+
+            .footer1,
+            .footer2 {
+                margin-right: 10px;
+            }
+
+            .text-footer {
+                width: 80%;
+                margin: 5px 0;
+            }
+
+            .submit-footer {
+                margin: 5px 0;
+            }
+
+            .p-footer {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <h1>CHARM</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto nav nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="new.html">NEW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bestseller.html">BESTSELLER</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="eyes.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            EYE MAKEUP</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item" href="eyecream.html">EYE CREAM</a></li>
+                            <li><a class="dropdown-item" href="eyeliner.html">EYELINER</a></li>
+                            <li><a class="dropdown-item" href="mascara.html">MASCARA</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="face.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            FACE MAKEUP</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="makeup.html"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">MAKEUP</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="powder.html">POWDER</a></li>
+                                    <li><a class="dropdown-item" href="blush.html">BLUSH</a></li>
+                                    <li><a class="dropdown-item" href="primer.html">PRIMER</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="skincare.html"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">SKINCARE</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="oilyskin.html">OILY SKIN</a></li>
+                                    <li><a class="dropdown-item" href="dryskin.html">DRY SKIN</a></li>
+                                    <li><a class="dropdown-item" href="sensitiveskin.html">SENSITIVE SKIN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="lip.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">LIP
+                            MAKEUP</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item" href="lipbalm.html">LIP BALM</a></li>
+                            <li><a class="dropdown-item" href="lipstick.html">LIP STICK</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="promotion.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">PROMOTION</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item" href="flashsale.html">FLASH SALE</a></li>
+                            <li><a class="dropdown-item" href="1get1.html">1 GET 1</a></li>
+                            <li><a class="dropdown-item" href="fiftyoff.html">50 % OFF</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="account.html"><i class="bi bi-person"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorite.html"><i class="bi bi-suit-heart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-bag"><a class="nav-link " href="cart.html"><i class="bi bi-cart"></i></a>
+                            <div class="cartcount" id="cartcount">
+                                0
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-list"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="login.html">LOG IN</a></li>
+                            <li><a class="dropdown-item" href="createaccount.html">CREATE ACCOUNT</a></li>
+                            <li><a class="dropdown-item" href="discount.html">GET CODE</a></li>
+                            <li><a class="dropdown-item" href="contact.html">CONTACT US</a></li>
+                            <li><a class="dropdown-item" href="setting.html">SETTING</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="logout.html">LOG OUT</a></li>
+                            <li><a class="dropdown-item" href="faq.html">FAQs</a></li>
+                            <li><a class="dropdown-item" href="termandcondition.html">TERM & CONDITIONS</a></li>
+                            <li><a class="dropdown-item" href="privacy.html">PRIVACY POLICY</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2>TERM AND CONDITIONS</h2>
+    <div class="term">
+
+        <p class="p-1">Charm, Inc. (Charm) provides the content, services, and promotional materials available on and
+            through the
+            websites that Charm owns or controls (today or in the future) subject to the following terms and conditions
+            (Terms and Conditions). These
+            Terms and Conditions also apply to the way we interact with you, and you interact with us, on third party
+            sites
+            where we post content or invite your feedback or participation, including, but not limited to,
+            Facebook, Instagram and Twitter. By accessing or using the Sites,signing up for the Mobile Program, you are
+            acknowledging that you have
+            read, understand, and agree, without limitation or qualification, to be bound by these Terms and Conditions,
+            which include an ARBITRATION PROVISION, CLASS ACTION WAIVER, and our Privacy Policy.</p>
+        <p class="p-2">Please review the other policy statements that appear throughout our Sites including for Charm's
+            loyalty
+            program
+            so you understand specific terms relating to functionality, ordering information, promotions, contests and
+            our
+            use of photos and videos you may provide to us. References to Terms and Conditions include these other
+            policy
+            statements.</p>
+        <h3>additional policies</h3>
+        <p class="p-1">The following policies are incorporated into these Terms and Conditions. By agreeing to these
+            Terms and
+            Conditions, you also agree (as applicable) to:
+            <a class="a-pri" href="privacy.html">Privacy Policy</a>: Our Privacy Policy also governs how we collect,
+            store, process, and share
+            your information.
+        </p>
+        <h3>mobile program terms and conditions</h3>
+        <p class="p-1"> Charm offers, or may offer in the future, various mobile messaging services (collectively, the
+            Mobile
+            Program).
+            For example, you may receive a coupon for texting a short code, your email address, or other requested
+            information to an identified number. By signing up for the Mobile Program, or by otherwise using or
+            participating in the Mobile Program, you agree to Charm’s Terms and Conditions along with these Mobile
+            Messaging
+            Terms and Conditions (collectively, the Terms). Furthermore, by signing up for the Mobile Program, sending a
+            mobile message to participate in the Mobile Program, or by otherwise using or participating in the Mobile
+            Program, you consent to the collection, use and disclosure of your personal information in accordance with
+            Charm's Privacy Policy.
+            These Terms may change from time to time, and we will post any updates here.</p>
+        <h3>purchase related policies; use of the Sites</h3>
+        <p class="p-1">The products available on the Sites and any samples thereof we may provide to
+            you, are for personal use only. You may not sell or resell any of the products or services, or samples that
+            you
+            purchase or otherwise receive from us. Customers may not purchase more than 6 units of a single item in one
+            transaction and/or within a 24 hours window. We reserve the right, with or without notice, to cancel or
+            reduce
+            the quantity of any orders that we believe, in our sole discretion, may result in the violation of our Terms
+            and
+            Conditions.
+            Charm does not ship to freight forwarding companies or export agents.
+            We currently ship our products to the United States, Canada, China in accordance with the terms of our
+            FAQ at <a href="#">FAQ</a> and to other international countries in accordance with the terms of our
+            Product Sales, Shipping, and Returns Policy, the full version of which is available here and is summarized
+            for
+            your convenience below.</p>
+        <ul>
+            <li>we do not ship international orders to P.O. Boxes;</li>
+            <li>you will be the importer of record for your order;</li>
+            <li>we bill your credit card at the time your order ships, and shipping speed and delivery times depend on
+                the
+                shipping method you choose.</li>
+            <li>certain Tarte products are excluded from international shipping;</li>
+        </ul>
+        <h3>accuracy of information; cosmetic sales only</h3>
+        <p class="p-1">We attempt to be as accurate as possible when describing our products; however, to the extent
+            permitted by
+            applicable law, we do not warrant that the product descriptions, colors or other content available on the
+            Sites
+            are accurate, complete, reliable, current, or error-free. From time to time there may be information on the
+            Sites that is in error, including with respect to descriptions, pricing and availability. Charm reserves the
+            right to correct those errors and to change or update information at any time without prior notice
+            (including
+            after you have submitted your order).
+
+            Our product descriptions and content are for educational and informational purposes only. We manufacture and
+            sell cosmetics, so none of the statements on the Sites have been evaluated by the U.S. Food and Drug
+            Administration or any other country's drug regulatory authorities and the results reported, if any, may not
+            necessarily occur in all individuals. We are not offering products to diagnose, treat, cure or prevent any
+            condition or disease. The Sites are not a substitute for medical advice from your own health care
+            practitioner.
+            Please test all products before use.</p>
+        <h3>dispute resolution</h3>
+        <p class="p-3">ARBITRATION PROVISION AND JURY TRIAL AND CLASS ACTION WAIVERS PLEASE READ THIS CAREFULLY. IT
+            AFFECTS YOUR
+            RIGHTS.
+            YOU AGREE THAT BY ACCESSING OR USING THE SITES, PARTICIPATING ON THE CHARM CHANNELS WITH CHARM, OR SIGNING
+            UP
+            FOR THE MOBILE PROGRAM, YOU ARE WAIVING THE RIGHT TO A COURT OR JURY TRIAL OR TO PARTICIPATE IN A CLASS
+            ACTION.
+            YOU AGREE THAT YOU MAY BRING CLAIMS AGAINST CHARM ONLY IN YOUR INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR
+            CLASS MEMBER IN ANY PURPORTED CLASS, REPRESENTATIVE, OR COLLECTIVE ACTION OR PROCEEDING. ANY ARBITRATION
+            WILL
+            TAKE PLACE ON AN INDIVIDUAL BASIS; CLASS ARBITRATIONS AND CLASS ACTIONS ARE NOT PERMITTED.
+
+            YOU AGREE THAT ANY AND ALL CLAIMS AND DISPUTES ARISING FROM OR RELATING IN ANY WAY TO THE SUBJECT MATTER OF
+            THESE TERMS AND CONDITIONS, YOUR USE OF THE SITES, YOUR PARTICIPATION IN THE MOBILE PROGRAM, OR YOUR
+            DEALINGS
+            WITH TARTE SHALL BE FINALLY SETTLED AND RESOLVED THROUGH BINDING INDIVIDUAL ARBITRATION AS DESCRIBED IN THIS
+            SECTION.
+
+            THIS AGREEMENT TO ARBITRATE IS INTENDED TO BE INTERPRETED BROADLY. THE ARBITRATION WILL BE GOVERNED BY THE
+            COMMERCIAL ARBITRATION RULES AND THE SUPPLEMENTARY PROCEDURES FOR CONSUMER RELATED DISPUTES OF THE AMERICAN
+            ARBITRATION ASSOCIATION (AAA), AS MODIFIED BY THIS SECTION. THE ARBITRATION WILL BE CONDUCTED USING ONE
+            ARBITRATOR WITH SUBSTANTIAL EXPERIENCE IN RESOLVING COMMERCIAL CONTRACT DISPUTES, WHO SHALL BE SELECTED FROM
+            THE
+            APPROPRIATE LIST OF ARBITRATORS IN ACCORDANCE WITH THE ARBITRATION RULES AND PROCEDURES OF ANY ARBITRATION
+            ORGANIZATION OR ARBITRATOR THAT YOU AND TARTE AGREE UPON IN WRITING OR THAT IS APPOINTED PURSUANT TO SECTION
+            5
+            OF THE FEDERAL ARBITRATION ACT.
+
+            FOR ANY CLAIM WHERE THE TOTAL AMOUNT OF THE AWARD SOUGHT IS $10,000 OR LESS, THE ARBITRATOR, YOU AND TARTE
+            MUST
+            ABIDE BY THE FOLLOWING RULES: (A) THE ARBITRATION SHALL BE CONDUCTED SOLELY BASED ON TELEPHONE OR ONLINE
+            APPEARANCES AND/OR WRITTEN SUBMISSIONS; AND (B) THE ARBITRATION SHALL NOT INVOLVE ANY PERSONAL APPEARANCE BY
+            THE
+            PARTIES OR WITNESSES UNLESS OTHERWISE MUTUALLY AGREED BY THE PARTIES. IF THE CLAIM EXCEEDS $10,000, THE
+            RIGHT TO
+            A HEARING WILL BE DETERMINED BY THE AAA RULES, AND THE HEARING (IF ANY) MUST TAKE PLACE IN NEW YORK, NEW
+            YORK.
+            THE ARBITRATOR’S RULING IS BINDING AND MAY BE ENTERED AS A JUDGMENT IN ANY COURT OF COMPETENT JURISDICTION,
+            OR
+            APPLICATION MAY BE MADE TO SUCH COURT FOR JUDICIAL ACCEPTANCE OF ANY AWARD AND AN ORDER OF ENFORCEMENT, AS
+            THE
+            CASE MAY BE.
+
+            THERE IS NO JUDGE OR JURY IN ARBITRATION. ARBITRATION PROCEDURES ARE SIMPLER AND MORE LIMITED THAN RULES
+            APPLICABLE IN COURT AND REVIEW BY A COURT IS LIMITED.
+
+            YOU WILL NOT BE ABLE TO HAVE A COURT OR JURY TRIAL OR PARTICIPATE IN A CLASS ACTION OR CLASS ARBITRATION.
+            YOU
+            UNDERSTAND AND AGREE THAT BY AGREEING TO RESOLVE DISPUTES THROUGH INDIVIDUAL ARBITRATION, YOU ARE WAIVING
+            THE
+            RIGHT TO A COURT OR JURY TRIAL. ANY DISPUTE SHALL BE ARBITRATED ON AN INDIVIDUAL BASIS, AND NOT AS A CLASS
+            ACTION, REPRESENTATIVE ACTION, CLASS ARBITRATION OR ANY SIMILAR PROCEEDING. THE ARBITRATOR MAY NOT
+            CONSOLIDATE
+            THE CLAIMS OF MULTIPLE PARTIES.
+
+            ANY CAUSE OF ACTION OR CLAIM YOU MAY HAVE ARISING OUT OF OR RELATING IN ANY WAY TO THESE TERMS AND
+            CONDITIONS,
+            YOUR USE OF THE SITES, YOUR PARTICIPATION IN THE MOBILE PROGRAM, OR YOUR DEALINGS WITH TARTE MUST BE
+            COMMENCED
+            IN ARBITRATION WITHIN TWO (2) YEARS AFTER THE CAUSE OF ACTION ACCRUES. AFTER THAT TWO (2)-YEAR PERIOD, SUCH
+            CAUSE OF ACTION OR CLAIM IS PERMANENTLY BARRED. SOME JURISDICTIONS DO NOT ALLOW TIME LIMITATIONS OTHER THAN
+            THOSE SET FORTH IN SUCH STATE’S STATUTE OF LIMITATIONS LAWS. IN SUCH CASES, THE APPLICABLE STATUTE OF
+            LIMITATIONS PROVIDED FOR UNDER THE LAWS OF SUCH STATE SHALL APPLY.
+
+            YOU AGREE THAT ALL CHALLENGES TO THE VALIDITY AND APPLICABILITY OF THE ARBITRATION PROVISION—I.E. WHETHER A
+            PARTICULAR CLAIM OR DISPUTE IS SUBJECT TO ARBITRATION—SHALL BE DETERMINED BY THE ARBITRATOR. NOTWITHSTANDING
+            ANY
+            PROVISION IN THESE TERMS TO THE CONTRARY, IF THE CLASS-ACTION WAIVER ABOVE IS DEEMED INVALID OR
+            UNENFORCEABLE,
+            YOU AGREE THAT YOU SHALL NOT SEEK TO, AND WAIVE ANY RIGHT TO, ARBITRATE CLASS OR COLLECTIVE CLAIMS. IF THE
+            ARBITRATION PROVISION IN THIS SECTION IS FOUND UNENFORCEABLE OR TO NOT APPLY FOR A GIVEN DISPUTE, THEN THE
+            PROCEEDING MUST BE BROUGHT EXCLUSIVELY IN THE STATE COURTS OF COMPETENT JURISDICTION OR THE UNITED STATES
+            DISTRICT COURTS LOCATED IN NEW YORK, NEW YORK, AS APPROPRIATE, AND YOU AGREE TO SUBMIT TO THE PERSONAL
+            JURISDICTION OF EACH OF THESE COURTS FOR THE PURPOSE OF LITIGATING SUCH CLAIMS OR DISPUTES, AND YOU STILL
+            WAIVE
+            YOUR RIGHT TO A JURY TRIAL, WAIVE YOUR RIGHT TO INITIATE OR PROCEED IN A CLASS OR COLLECTIVE ACTION, AND
+            REMAIN
+            BOUND BY ANY AND ALL LIMITATIONS ON LIABILITY AND DAMAGES INCLUDED IN THESE TERMS AND CONDITIONS. THIS
+            ARBITRATION AGREEMENT AND CLASS ACTION WAIVER WILL SURVIVE TERMINATION OF YOUR USE OF THE SITES OR TARTE
+            CHANNELS, YOUR PARTICIPATION IN THE MOBILE PROGRAM, AND YOUR RELATIONSHIP WITH TARTE. THIS ARBITRATION
+            AGREEMENT
+            INVOLVES INTERSTATE COMMERCE AND, THEREFORE, SHALL BE GOVERNED BY THE FEDERAL ARBITRATION ACT, 9 U.S.C. §§
+            1-16
+            (FAA), AND NOT BY STATE LAW. INFORMATION ON AAA AND HOW TO START ARBITRATION CAN BE FOUND AT WWW.ADR.ORG. IF
+            YOU
+            WISH TO INITIATE ARBITRATION AGAINST CHARM, YOU MUST SEND WRITTEN NOTICE TO TARTE AT </p>
+            <br> <br>
+        <div class="address2"> THE ADDRESS BELOW: <br>
+            Charm
+            1234 Mueng, <br>MuengKhonkaen
+            Khonkaen,12345
+        </div>
+        <br> <br>
+        <span class="italic">
+            With respect to any dispute regarding the Sites or your use of the Sites, all rights and obligations and
+            all
+            actions contemplated by these Terms and Conditions shall be governed by the laws of New York, without
+            giving
+            effect to any principles of conflicts of laws, as if the Terms and Conditions were a contract wholly
+            entered
+            into and wholly performed within Thailand.
+        </span>
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer1">
+                <p class="p-follow">FOLLOW US ON :</p> <br>
+                <div class="div-li">
+                    <a class="a-social" href="#face">FACEBOOK</a>
+                    <a class="a-social" href="#ing">INSTRAGRAM</a>
+                    <a class="a-social" href="#twit">TWITTER</a>
+                </div>
+            </div>
+            <div class="footer2">
+                <label for="email">EMAIL TO US:</label> <br>
+                <input id="email" class="text-footer" type="text" value="write your problem"> <br>
+                <input class="submit-footer" type="submit" value="SEND">
+            </div>
+        </div>
+        <div class="div-p">
+            <p class="p-footer">&copy; 2024 Cosmetic Store. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

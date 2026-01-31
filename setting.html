@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetic Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="cart.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        footer {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer {
+            display: flex;
+            background-color: black;
+            color: white;
+            height: 180px;
+            text-align: center;
+        }
+
+        .footer1,
+        .footer2 {
+            margin-left: 10%;
+            padding-top: 2%;
+            padding-right: 5%;
+        }
+
+        .a-social {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .a-social:hover {
+            text-decoration: underline;
+        }
+
+        .div-li {
+            padding-right: 5%;
+            display: flex;
+            margin-left: 5em;
+        }
+
+        .div-p {
+            clear: both;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        .text-footer {
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 5%;
+            padding: 2%;
+        }
+
+        .submit-footer {
+            text-align: center;
+            padding: 2%;
+            color: white;
+            background-color: rgb(212, 33, 33);
+            border: 3px solid rgb(212, 33, 33);
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 5%;
+        }
+
+        .submit-footer:hover {
+            background-color: aliceblue;
+            color: rgb(212, 33, 33);
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(212, 33, 33);
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        .p-border {
+            border: 1px solid black;
+            padding: 1%;
+            width: 25em;
+        }
+
+        .account {
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 2%;
+            display: flex;
+            border: 1px solid black;
+            padding: 2%;
+            padding-left: 5%;
+        }
+
+        .wrap1 {
+            margin-right: 5%;
+        }
+
+        .wrap2 {
+            margin-right: 10%;
+        }
+
+        .wrap3 {
+            margin-top: 5%;
+        }
+
+        .btn-edit {
+            text-align: center;
+            margin-left: 45%;
+            padding: 1%;
+            padding-left: 2%;
+            padding-right: 2%;
+            margin-top: 3%;
+            color: white;
+            background-color: rgb(212, 33, 33);
+            border: 3px solid rgb(212, 33, 33);
+            border-radius: 20px;
+            cursor: pointer;
+            width: 200px;
+            margin-bottom: 40%;
+        }
+
+        .btn-edit:hover {
+            background-color: rgb(0, 0, 0);
+            border: 3px solid black;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .img-pro {
+            border: 0.5px solid black;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        .p-pro {
+            margin-left: 15%;
+        }
+
+        h2 {
+            margin-top: 2%;
+            margin-left: 5%;
+            font-size: 2.5em;
+            width: 7.5em;
+            color: rgb(0, 0, 0);
+            font-family: fantasy, sans-serif;
+            border-bottom: 5px solid red;
+        }
+
+        .btn-choose {
+            margin-top: 5%;
+            cursor: pointer;
+        }
+
+        .text {
+            width: 100%;
+            height: 2.2em
+        }
+
+        .text1 {
+            width: 26em;
+            height: 2.2em;
+        }
+
+        .radio {
+            display: flex;
+        }
+
+        .r1,
+        .r2 {
+            margin-right: 5%;
+        }
+
+        h4 {
+            font-size: large;
+        }
+
+        .payment,
+        .noti,
+        .Address,
+        .password {
+            margin-top: 8%;
+        }
+
+        .lastname,
+        .birthday,
+        .phone {
+            margin-top: 6%;
+        }
+
+        .setting {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .account {
+                width: 80%;
+                margin-right: 10px;
+                margin-left: 100px;
+            }
+
+            .p-border {
+                width: 200px;
+            }
+
+            .footer1 {
+                margin-left: 0;
+            }
+
+            .text {
+                width: 200px;
+            }
+
+            .text1 {
+                width: 200px;
+            }
+
+        }
+
+        @media screen and (max-width: 390px) {
+
+            .account {
+                width: 700px;
+                height: 1700px;
+                margin-top: 40px;
+                margin-right: 40px;
+                margin-left: 150px;
+            }
+
+            .p-border,.text,.text1 {
+                width: 400px;
+                height: 60px;
+            }
+
+            .div-p {
+                width: 70em;
+            }
+
+            h4 {
+                font-size: 2em;
+            }
+
+            .account {
+                display: block;
+            }
+
+            .wrap1,
+            .wrap2,
+            .wrap3 {
+                margin-left: 180px;
+                margin-top: 50px;
+            }
+
+            .p-pro {
+                display: none;
+            }
+
+            .footer {
+                width: 70em;
+                padding: 10px;
+                margin-top: 90%;
+            }
+
+            .btn-edit {
+                margin-bottom: 80%;
+                padding: 5% 10% 5% 10%;
+                margin-left: 400px;
+                font-size: 1.5em;
+                margin-top: 10%;
+            }
+
+            .footer1,
+            .footer2 {
+                margin-right: 10px;
+            }
+
+            .text-footer {
+                width: 80%;
+                margin: 5px 0;
+            }
+
+            .submit-footer {
+                margin: 5px 0;
+            }
+
+            .p-footer {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <h1>CHARM</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto nav nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="new.html">NEW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bestseller.html">BESTSELLER</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="eyes.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            EYE MAKEUP</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item" href="eyecream.html">EYE CREAM</a></li>
+                            <li><a class="dropdown-item" href="eyeliner.html">EYELINER</a></li>
+                            <li><a class="dropdown-item" href="mascara.html">MASCARA</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="face.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            FACE MAKEUP</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="makeup.html"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">MAKEUP</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="powder.html">POWDER</a></li>
+                                    <li><a class="dropdown-item" href="blush.html">BLUSH</a></li>
+                                    <li><a class="dropdown-item" href="primer.html">PRIMER</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="skincare.html"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">SKINCARE</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="oilyskin.html">OILY SKIN</a></li>
+                                    <li><a class="dropdown-item" href="dryskin.html">DRY SKIN</a></li>
+                                    <li><a class="dropdown-item" href="sensitiveskin.html">SENSITIVE SKIN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="lip.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">LIP
+                            MAKEUP</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item" href="lipbalm.html">LIP BALM</a></li>
+                            <li><a class="dropdown-item" href="lipstick.html">LIP STICK</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="promotion.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">PROMOTION</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item" href="flashsale.html">FLASH SALE</a></li>
+                            <li><a class="dropdown-item" href="1get1.html">1 GET 1</a></li>
+                            <li><a class="dropdown-item" href="fiftyoff.html">50 % OFF</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="account.html"><i class="bi bi-person"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorite.html"><i class="bi bi-suit-heart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-bag"><a class="nav-link " href="cart.html"><i class="bi bi-cart"></i></a>
+                            <div class="cartcount" id="cartcount">
+                                0
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-list"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="login.html">LOG IN</a></li>
+                            <li><a class="dropdown-item" href="createaccount.html">CREATE ACCOUNT</a></li>
+                            <li><a class="dropdown-item" href="discount.html">GET CODE</a></li>
+                            <li><a class="dropdown-item" href="contact.html">CONTACT US</a></li>
+                            <li><a class="dropdown-item" href="setting.html">SETTING</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="logout.html">LOG OUT</a></li>
+                            <li><a class="dropdown-item" href="faq.html">FAQs</a></li>
+                            <li><a class="dropdown-item" href="termandcondition.html">TERM & CONDITIONS</a></li>
+                            <li><a class="dropdown-item" href="privacy.html">PRIVACY POLICY</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h2>SETTING ACCOUNT</h2>
+    <div class="account">
+        <div class="wrap1">
+            <div class="name">
+                <h4>Name</h4>
+                <input class="text" type="text" name="fname" value="Kevin">
+            </div>
+            <div class="lastname">
+                <h4>Lastname</h4>
+                <input class="text" type="text" name="lname" value="Delong">
+            </div>
+            <div class="birthday">
+                <h4>Birthday</h4>
+                <p class="p-border">11/02/1999</p>
+            </div>
+            <div class="email">
+                <h4>Email</h4>
+                <input class="text" type="text" name="mail" value="123456@gmail.com">
+            </div>
+            <div class="phone">
+                <h4>Phone</h4>
+                <input class="text" type="tel" name="phone" value="012-235-5654">
+            </div>
+        </div>
+        <div class="wrap2">
+            <div class="Sex">
+                <h4>Sex</h4>
+                <div class="radio">
+                    <div class="r1">
+                        <input type="radio" name="sex" value="Male">Male
+                    </div>
+                    <div class="r2">
+                        <input type="radio" name="sex" value="Female">Female
+                    </div>
+                    <div class="r3">
+                        <input type="radio" name="sex" value="Other">Other
+                    </div>
+                </div>
+            </div>
+            <div class="password">
+                <h4>Password</h4>
+                <input class="text1" type="password" value="**********">
+            </div>
+            <div class="Address">
+                <h4>Address</h4>
+                <input class="text1" type="text" name="address" value="123/45 hangpa m.hop loey 12456">
+
+            </div>
+            <div class="payment">
+                <h4>Payment</h4>
+                <select name="credit">
+                    <option value="Visa">Visa</option>
+                    <option>QR Code</option>
+                    <option>Promt Pay</option>
+                </select>
+            </div>
+            <div class="noti">
+                <h4>Notifications</h4>
+                <input type="checkbox">Email Notification <br>
+                <input type="checkbox">SMS Notification <br>
+                <input type="checkbox">Push Notification
+            </div>
+        </div>
+        <div class="wrap3">
+            <div class="p-pro">
+                <h4>Profile</h4>
+            </div>
+            <img class="img-pro" width="125" height="120" src="./img/profile-pic.jpeg" alt="profile">
+            <div class="btn-choose">
+                <input type="file" name="file">
+            </div>
+        </div>
+    </div>
+    <div class="btn-edit">
+        <a class="setting" href="account.html">SAVE</a>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer1">
+                <p class="p-follow">FOLLOW US ON :</p> <br>
+                <div class="div-li">
+                    <a class="a-social" href="#face">FACEBOOK</a>
+                    <a class="a-social" href="#ing">INSTRAGRAM</a>
+                    <a class="a-social" href="#twit">TWITTER</a>
+                </div>
+            </div>
+            <div class="footer2">
+                <label for="email">EMAIL TO US:</label> <br>
+                <input id="email" class="text-footer" type="text" value="write your problem"> <br>
+                <input class="submit-footer" type="submit" value="SEND">
+            </div>
+        </div>
+        <div class="div-p">
+            <p class="p-footer">&copy; 2024 Cosmetic Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
